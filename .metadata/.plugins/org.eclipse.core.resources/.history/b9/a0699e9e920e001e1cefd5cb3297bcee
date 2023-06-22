@@ -1,0 +1,24 @@
+package GenericLib;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+public class WebDriverUtilities {
+public void dropDown(WebElement ele,String text) {
+	Select s=new Select(ele);
+	s.selectByVisibleText(text);
+}
+public void click(WebElement ele){
+	ele.click();
+}
+public void rightClick(WebElement ele,WebDriver driver) {
+	Actions a=new Actions(driver);
+	a.contextClick().perform();;
+}
+public void DoubleClick(WebElement ele,WebDriver driver) {
+	Actions a=new Actions(driver);
+	a.doubleClick().perform();;
+}
+}

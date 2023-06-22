@@ -1,0 +1,38 @@
+package POM;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+	@FindBy(name="q")
+	private WebElement SearchFld;
+	
+	@FindBy(xpath="//div[text()='Popularity']")
+	private WebElement Filter;
+	
+	@FindBy(xpath="//div[text()='SAMSUNG Galaxy F13 (Waterfall Blue, 128 GB)']")
+	private WebElement Samsung;
+	
+	@FindBy(xpath="//button[@class='L0Z3Pu']")
+	private WebElement searchbtn;
+	
+	public HomePage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+	public void Searchfd() {
+		SearchFld.sendKeys("mobiles");
+	}
+	public void Filters() {
+		Filter.click();
+	}
+	public void Samsun() {
+		Samsung.click();
+	}
+	public void search() {
+		searchbtn.click();
+	}
+	
+	
+}

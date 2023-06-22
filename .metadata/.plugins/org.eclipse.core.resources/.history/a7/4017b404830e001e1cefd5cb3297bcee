@@ -1,0 +1,12 @@
+import org.testng.annotations.BeforeMethod;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Base {
+	
+
+	@BeforeMethod
+	public void OpenApp() {
+	 WebDriverManager.chromedriver().setup();
+	
+}}

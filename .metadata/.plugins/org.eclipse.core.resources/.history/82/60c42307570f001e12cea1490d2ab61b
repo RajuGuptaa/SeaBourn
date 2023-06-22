@@ -1,0 +1,9 @@
+package Script;
+
+import GenericLib.Base;
+import POM.HomePage;
+
+public class AddToWishList extends Base {
+	HomePage hp=new HomePage(driver);
+
+}

@@ -1,0 +1,17 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeMethod;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Base {
+	public WebDriver driver;
+
+	@BeforeMethod
+	public void OpenApp() {
+	 WebDriverManager.chromedriver().setup();
+	 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	 driver.manage().window().maximize();
+	
+}}

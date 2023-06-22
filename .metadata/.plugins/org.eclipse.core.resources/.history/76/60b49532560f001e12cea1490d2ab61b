@@ -1,0 +1,6 @@
+import GenericLib.Base;
+import POM.HomePage;
+
+public class Scripting extends Base{
+	HomePage hp=new HomePage(driver);
+}

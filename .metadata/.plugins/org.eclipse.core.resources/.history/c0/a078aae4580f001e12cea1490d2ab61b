@@ -1,0 +1,18 @@
+package Script;
+
+import org.testng.annotations.Test;
+
+import GenericLib.Base;
+import GenericLib.WebDriverUtilities;
+import POM.HomePage;
+
+public class AddToWishList extends Base {
+	@Test
+	public void TC1() throws InterruptedException {
+	HomePage hp=new HomePage(driver);
+	WebDriverUtilities wu=new WebDriverUtilities();
+	hp.Searchfd();
+	Thread.sleep(2000);
+	
+}
+}
